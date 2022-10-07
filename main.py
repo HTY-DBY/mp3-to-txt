@@ -22,7 +22,7 @@ api_get_result = '/getResult'
 file_piece_sice = 10485760
 
 # ——————————————————转写可配置参数————————————————
-# 参数可在官网界面（https://doc.xfyun.cn/rest_api/%E8%AF%AD%E9%9F%B3%E8%BD%AC%E5%86%99.html）查看，根据需求可自行在gene_params方法里添加修改
+# 参数可在官网界面（https://www.xfyun.cn/doc/asr/lfasr/API.html#%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E）查看，根据需求可自行在gene_params方法里添加修改
 # 转写类型
 lfasr_type = 0
 # 是否开启分词
@@ -61,7 +61,7 @@ class RequestApi(object):
         self.secret_key = secret_key
         self.upload_file_path = upload_file_path
 
-    # 根据不同的apiname生成不同的参数,本示例中未使用全部参数您可在官网(https://doc.xfyun.cn/rest_api/%E8%AF%AD%E9%9F%B3%E8%BD%AC%E5%86%99.html)查看后选择适合业务场景的进行更换
+    # 根据不同的apiname生成不同的参数,本示例中未使用全部参数您可在官网(https://www.xfyun.cn/doc/asr/lfasr/API.html#%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E)查看后选择适合业务场景的进行更换
     def gene_params(self, apiname, taskid=None, slice_id=None):
         appid = self.appid
         secret_key = self.secret_key
@@ -211,5 +211,5 @@ class RequestApi(object):
 # 输入讯飞开放平台的appid，secret_key和待转写的音频文件路径
 if __name__ == '__main__':
     api = RequestApi(
-        appid="0a1112e2", secret_key="39e74fcd1b47d49bdea721298278f23a", upload_file_path=r"m.mp3")
+        appid="", secret_key="", upload_file_path=r"")
     api.all_api_request()
